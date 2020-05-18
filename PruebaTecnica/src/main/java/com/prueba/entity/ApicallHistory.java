@@ -17,10 +17,10 @@ public class ApicallHistory {
 	@GeneratedValue(strategy = GenerationType.AUTO, generator= "native")
 	@GenericGenerator(name = "native", strategy = "native")
 	private int id;
-	
+
 	@Column
 	private String type;
-	
+
 	@Column
 	private Date callDate;
 
@@ -30,32 +30,41 @@ public class ApicallHistory {
 		this.callDate = callDate;
 	}
 	
+	
 	public ApicallHistory() {
+		
 	}
+
 
 	public int getId() {
 		return id;
 	}
 
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 
 	public String getType() {
 		return type;
 	}
 
+
 	public void setType(String type) {
 		this.type = type;
 	}
+
 
 	public Date getCallDate() {
 		return callDate;
 	}
 
+
 	public void setCallDate(Date callDate) {
 		this.callDate = callDate;
 	}
+
 
 	@Override
 	public String toString() {
@@ -63,7 +72,6 @@ public class ApicallHistory {
 	}
 	
 	
-	
-	
+
 
 }

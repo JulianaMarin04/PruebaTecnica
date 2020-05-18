@@ -7,23 +7,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.prueba.entity.Comment;
-import com.prueba.service.CommentServiceImp;
+import com.prueba.entity.ApicallHistory;
+import com.prueba.service.ApicallHistoryServiceImp;
 
 @RestController
-@RequestMapping("/HomeComment")
-public class ControllerComment {
+@RequestMapping("/HomeHistory")
+public class ControllerApicallHistory {
 	
 	@Autowired
-	private CommentServiceImp commentServiceImp;
+	private ApicallHistoryServiceImp apicallHistortServiceImp;
 	
-	
-	@GetMapping("/Comments")
-	public List<Comment> comments(){
-		return commentServiceImp.comments();
+	@GetMapping("/History")
+	public List<ApicallHistory> history(){
+		return apicallHistortServiceImp.history();
 	}
-	
-
-	
 
 }
