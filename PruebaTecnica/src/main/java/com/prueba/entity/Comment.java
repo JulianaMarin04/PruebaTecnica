@@ -30,9 +30,7 @@ public class Comment {
 	@Column
 	private String body;
 	
-	
-	@JoinColumn(name = "FK_POST", nullable = false)
-    @ManyToOne(optional = false, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@ManyToOne
     private Post postId;
 
 	public Comment(String name, String email, String body) {

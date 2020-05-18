@@ -29,7 +29,7 @@ public class Post {
 	@Column
 	private String body;
 	
-	 @OneToMany(cascade = CascadeType.ALL, mappedBy = "post")
+	 @OneToMany(mappedBy="postId")
 	    private List<Comment> comments;
 	
 
